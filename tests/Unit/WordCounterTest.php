@@ -19,7 +19,7 @@ class WordCounterTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->wordCounterClass = new WordCounter(array(",",".","|",":",));
+        $this->wordCounterClass = new WordCounter(",",".","|",":");
     }
 
     public function test_should_initialize_word_counter_class(): void

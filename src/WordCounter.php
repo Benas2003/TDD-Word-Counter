@@ -7,7 +7,7 @@ class WordCounter
     private string $sorted_words = '';
     private array $separators_array = [' '];
 
-    public function __construct(array $separators_array)
+    public function __construct(...$separators_array)
     {
         $this->separators_array = array_merge($this->separators_array, $separators_array);
     }
@@ -49,7 +49,7 @@ class WordCounter
         }
     }
 
-    private function multipleExplode ($delimiters, $string): array
+    private function multipleExplode (array $delimiters, string $string): array
     {
         $phase = str_replace($delimiters, $delimiters[0], $string);
         return explode($delimiters[0], $phase);
