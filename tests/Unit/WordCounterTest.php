@@ -3,9 +3,9 @@
 namespace Test\Unit;
 
 use PHPUnit\Framework\TestCase;
-use TDD\WordCounterClass;
+use TDD\WordCounter;
 
-class WordCounterClassTest extends TestCase
+class WordCounterTest extends TestCase
 {
     const STRING_OF_WORDS_SEPARETED_WITH_SPACE = 'labas gelda gelda iki iki gelda';
     const STRING_OF_WORDS_SEPARETED_WITH_DOT = 'labas.gelda.gelda.iki.iki.gelda';
@@ -15,16 +15,16 @@ class WordCounterClassTest extends TestCase
     const CORRECTLY_SORTED_WORDS = "gelda, 3<br>iki, 2<br>labas, 1<br>";
     const CORRECTLY_SORTED_WORDS_WITH_MULTIPLE_SEPARATORS = "second, 3<br>the, 2<br>was, 2<br>first, 1<br>alright, 1<br>but, 1<br>tough, 1<br>";
 
-    private WordCounterClass $wordCounterClass;
+    private WordCounter $wordCounterClass;
 
     protected function setUp(): void
     {
-        $this->wordCounterClass = new WordCounterClass(array(",",".","|",":",));
+        $this->wordCounterClass = new WordCounter(array(",",".","|",":",));
     }
 
     public function test_should_initialize_word_counter_class(): void
     {
-        $this->assertInstanceOf(WordCounterClass::class, $this->wordCounterClass);
+        $this->assertInstanceOf(WordCounter::class, $this->wordCounterClass);
     }
 
     public function test_should_return_correctly_counted_words_by_space_separator(): void

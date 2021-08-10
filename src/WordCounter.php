@@ -2,7 +2,7 @@
 
 namespace TDD;
 
-class WordCounterClass
+class WordCounter
 {
     private string $sorted_words = '';
     private array $separators_array = [' '];
