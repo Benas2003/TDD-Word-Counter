@@ -1,16 +1,11 @@
 {
-    "name": "arnas/tdd",
-    "authors": [
-        {
-            "name": "Arnas Kazlauskas",
-            "email": "arnas.kazlauskas@kilo.health"
-        }
-    ],
-    "require": {},
     "autoload": {
         "psr-4": {"TDD\\": "src/"}
     },
     "autoload-dev": {
         "psr-4": {"Test\\": "tests/"}
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
     }
 }
