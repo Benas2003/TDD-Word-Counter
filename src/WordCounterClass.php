@@ -5,16 +5,17 @@ namespace TDD;
 class WordCounterClass
 {
     private string $sorted_words = '';
-    private array $separators_array;
-    
+    private array $separators_array = [' '];
+
     public function __construct(array $separators_array)
     {
-        $this->separators_array = $separators_array;
+        $this->separators_array = array_merge($this->separators_array, $separators_array);
     }
 
     public function reformString(string $string): string
     {
-        $array = $this->separateString($string);
+        $lowercaseString = strtolower($string);
+        $array = $this->separateString($lowercaseString);
 
         $array_count_values = $this->sumEqualArrayStrings($array);
 
@@ -48,7 +49,8 @@ class WordCounterClass
         }
     }
 
-    private function multipleExplode ($delimiters, $string) {
+    private function multipleExplode ($delimiters, $string): array
+    {
         $phase = str_replace($delimiters, $delimiters[0], $string);
         return explode($delimiters[0], $phase);
     }
