@@ -12,8 +12,8 @@ class WordCounterTest extends TestCase
     const STRING_OF_WORDS_SEPARETED_WITH_MULTIPLE_SEPARATORS = 'The first second was alright,but the second second was tough';
 
 
-    const CORRECTLY_SORTED_WORDS = "gelda, 3<br>iki, 2<br>labas, 1<br>";
-    const CORRECTLY_SORTED_WORDS_WITH_MULTIPLE_SEPARATORS = "second, 3<br>the, 2<br>was, 2<br>first, 1<br>alright, 1<br>but, 1<br>tough, 1<br>";
+    const CORRECTLY_SORTED_WORDS = "gelda, 3\niki, 2\nlabas, 1\n";
+    const CORRECTLY_SORTED_WORDS_WITH_MULTIPLE_SEPARATORS = "second, 3\nthe, 2\nwas, 2\nfirst, 1\nalright, 1\nbut, 1\ntough, 1\n";
 
     private WordCounter $wordCounterClass;
 

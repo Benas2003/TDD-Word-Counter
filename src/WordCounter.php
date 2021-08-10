@@ -45,7 +45,7 @@ class WordCounter
     private function formatSortedString(array $array_count_values): void
     {
         foreach ($array_count_values as $word => $count) {
-            $this->sorted_words .= $word . ", " . $count . "<br>";
+            $this->sorted_words .= $word . ", " . $count . "\n";
         }
     }
 
