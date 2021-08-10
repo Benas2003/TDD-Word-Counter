@@ -14,8 +14,8 @@ class WordCounter
 
     public function reformString(string $string): string
     {
-        $lowercaseString = strtolower($string);
-        $array = $this->separateString($lowercaseString);
+        $lowercase_string = strtolower($string);
+        $array = $this->separateString($lowercase_string);
 
         $array_count_values = $this->sumEqualArrayStrings($array);
 
@@ -28,7 +28,7 @@ class WordCounter
 
     private function separateString(string $string): array
     {
-        return $this->multipleExplode($this->separators_array,$string);
+        return $this->multipleExplode($this->separators_array, $string);
     }
 
     private function sortArrayDescending(array $array_count_values): array
@@ -49,7 +49,7 @@ class WordCounter
         }
     }
 
-    private function multipleExplode (array $delimiters, string $string): array
+    private function multipleExplode(array $delimiters, string $string): array
     {
         $phase = str_replace($delimiters, $delimiters[0], $string);
         return explode($delimiters[0], $phase);
